@@ -160,10 +160,6 @@ gestion-formation/
 
 ##  Licence
 
-Ce projet est distribué sous la licence MIT.
-Vous êtes libre de l’utiliser, de le modifier et de le distribuer, à condition de conserver la mention de copyright et la licence dans toutes les copies.
-Voir le fichier LICENSE pour plus de détails.
-
 Ce projet est distribué sous la **licence MIT**.  
 Vous êtes libre de l'utiliser, de le modifier et de le distribuer, à condition de conserver la mention de copyright et la licence dans toutes les copies.  
 Voir le fichier `LICENSE` pour plus de détails.
