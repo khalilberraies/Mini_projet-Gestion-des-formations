@@ -102,7 +102,7 @@ Ouvrez directement le fichier `pom.xml` (via File → Open) – l'IDE reconnaît
 
 Ou exécutez la classe : `GestionFormationApplication.java`
 
-✅ Vérification :
+Vérification :
 ```
 Tomcat started on port(s): 8888 (http)
 ```
