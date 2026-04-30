@@ -1,26 +1,26 @@
-# 🚀 Gestion de Formation – Excellent Training · Green Building
+# Gestion de Formation – Excellent Training · Green Building
 
 Application full-stack de gestion des formations, avec un back-end Spring Boot (Java) et un front-end React.
 
 ---
 
-## 📖 Introduction
+##  Introduction
 
-Cette plateforme permet de gérer l’ensemble du cycle de vie des formations :  
+Cette plateforme permet de gérer l'ensemble du cycle de vie des formations :  
 catalogue des formations, gestion des participants, formateurs (internes/externes), structures, employeurs, profils, utilisateurs et rôles.  
 
 Elle inclut également un tableau de bord statistique (nombre de formations par année, répartition par profil, etc.).
 
-### 🛠️ Technologies utilisées
+###  Technologies utilisées
 - **Back-end** : Spring Boot 3.5.13, Spring Data JPA, Spring Security, MySQL  
 - **Front-end** : React 19 (create-react-app)  
 - **Base de données** : MySQL 8  
 
 ---
 
-## ⚙️ Prérequis
+##  Prérequis
 
-Avant de lancer l’application, assurez-vous d’avoir installé :
+Avant de lancer l'application, assurez-vous d'avoir installé :
 
 - Java 17 ou 21 (le projet utilise Java 21)
 - Maven (ou utilisez le wrapper `mvnw`)
@@ -30,7 +30,7 @@ Avant de lancer l’application, assurez-vous d’avoir installé :
 
 ---
 
-## 🗄️ Configuration de la base de données
+##  Configuration de la base de données
 
 ### 1. Démarrer MySQL
 
@@ -42,8 +42,7 @@ Lancez le service MySQL.
 CREATE DATABASE gestion_formation;
 ```
 
-### 3. Configurer `application.properties`
-
+### 3. Configurer application.properties
 Fichier : `src/main/resources/application.properties`
 
 ```properties
@@ -56,11 +55,11 @@ spring.jpa.show-sql=true
 server.port=8888
 ```
 
-⚠️ Remplacez `VOTRE_MOT_DE_PASSE_MYSQL` par votre mot de passe MySQL.
+> ⚠️ Remplacez `VOTRE_MOT_DE_PASSE_MYSQL` par votre mot de passe MySQL.
 
 ---
 
-## 🧩 Configuration du backend – Port & CORS
+##  Configuration du backend – Port & CORS
 
 - Le backend fonctionne par défaut sur le port **8888**
 - La configuration CORS est déjà gérée dans `SecurityConfig.java`
@@ -68,7 +67,7 @@ server.port=8888
 
 ---
 
-## 🌐 Configuration du frontend – Proxy (recommandé)
+##  Configuration du frontend – Proxy (recommandé)
 
 Ajoutez dans `frontend/package.json` :
 
@@ -81,32 +80,32 @@ Ajoutez dans `frontend/package.json` :
 }
 ```
 
-💡 Alternative : changer le port backend en `8080` :
-
-```properties
-server.port=8080
-```
+> 💡 Alternative : changer le port backend en 8080 :
+> ```properties
+> server.port=8080
+> ```
 
 ---
 
-## 🚀 Lancement de l’application
+##  Lancement de l'application
 
 ### 1. Backend (Spring Boot)
 
-Dans un terminal à la racine du projet :
+**Dans un IDE (IntelliJ, Eclipse, VS Code) :**  
+Ouvrez directement le fichier `pom.xml` (via File → Open) – l'IDE reconnaîtra le projet Maven et chargera automatiquement les dépendances.
+
+**Via le terminal** (à la racine du projet) :
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-Ou exécutez la classe :
-GestionFormationApplication.java
+Ou exécutez la classe : `GestionFormationApplication.java`
 
 ✅ Vérification :
-
+```
 Tomcat started on port(s): 8888 (http)
-
----
+```
 
 ### 2. Frontend (React)
 
@@ -116,12 +115,11 @@ npm install
 npm start
 ```
 
-🌍 Accès :  
-http://localhost:3000
+🌍 Accès : [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 📊 Données de démonstration
+##  Données de démonstration
 
 La classe `DataInitializer` remplit automatiquement la base de données avec des données de test si la table `role` est vide.
 
@@ -130,8 +128,8 @@ La classe `DataInitializer` remplit automatiquement la base de données avec des
 ## ❓ Problèmes fréquents et solutions
 
 | Symptôme | Cause probable | Solution |
-|----------|---------------|----------|
-| Access denied for user 'root'@'localhost' | Mauvais mot de passe MySQL | Vérifier `spring.datasource.password` |
+|----------|----------------|----------|
+| `Access denied for user 'root'@'localhost'` | Mauvais mot de passe MySQL | Vérifier `spring.datasource.password` |
 | Backend inaccessible | Mauvais port (8080 vs 8888) | Ajouter proxy ou changer `server.port` |
 | Erreurs JPA après déplacement | Cache IntelliJ corrompu | Supprimer `.idea` et `.iml`, réimporter |
 | Port 8888 déjà utilisé | Conflit de port | Changer port (ex: 8889) |
@@ -140,6 +138,7 @@ La classe `DataInitializer` remplit automatiquement la base de données avec des
 
 ## 📁 Structure du projet
 
+```
 gestion-formation/
 ├── src/main/java/com/isi/gestion_formation/
 │   ├── config/
@@ -155,16 +154,16 @@ gestion-formation/
 │   ├── public/
 │   └── package.json
 └── pom.xml
+```
 
 ---
 
-## 👥 Auteurs
+##  Licence
 
-Projet réalisé dans le cadre du module Mini-projet BD et POO – 2ème semestre 2025-2026.  
-Basé sur l’environnement Excellent Training – Green Building.
+Ce projet est distribué sous la licence MIT.
+Vous êtes libre de l’utiliser, de le modifier et de le distribuer, à condition de conserver la mention de copyright et la licence dans toutes les copies.
+Voir le fichier LICENSE pour plus de détails.
 
----
-
-## 📄 Licence
-
-Projet à usage pédagogique. Libre de le modifier et de le distribuer.
+Ce projet est distribué sous la **licence MIT**.  
+Vous êtes libre de l'utiliser, de le modifier et de le distribuer, à condition de conserver la mention de copyright et la licence dans toutes les copies.  
+Voir le fichier `LICENSE` pour plus de détails.
